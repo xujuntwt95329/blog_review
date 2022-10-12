@@ -6,7 +6,7 @@ date: 2022-10-12T21:27:24+08:00
 lastmod: 2022-10-12T21:27:24+08:00
 draft: false
 weight: 50
-images: ["blog_thumb_how-to-start-a-blog.jpg"]
+images: ["review.jpg"]
 categories: ["review"]
 tags: []
 contributors: ["Xu Jun"]
