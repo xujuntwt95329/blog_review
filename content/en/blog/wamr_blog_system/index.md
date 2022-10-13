@@ -197,8 +197,6 @@ mermaid: true
 - `title`, `excerpt`, `date`, `images`, `categories` and `contributors` are used to display the cover of this blog
 - Note that `draft` must be false, otherwise it will not be added into the final page.
 
-  displayed 
-
 ## Decisions
 
 <div>
