@@ -15,6 +15,8 @@ homepage: false
 mermaid: true
 ---
 
+{{< toc >}}
+
 # Motivation
 
 WAMR has a large amount of nice features, but we don't have a home to introduce these yet. A blog system would be a great choice, it will have such advantages:
