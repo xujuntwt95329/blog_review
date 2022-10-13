@@ -169,6 +169,34 @@ git push <fork_repo> <branch>
 # preview markdown on Github
 ```
 
+## Markdown header
+
+Hugo use some headers in the markdown to show in the page, here is the header for this blog.
+
+``` yaml
+---
+title: "WAMR blog system review"
+description: "Introducing WAMR blog system, review the content to be displayed and the writing && publishing flow"
+excerpt: "Introducing WAMR blog system, review the content to be displayed and the writing && publishing flow"
+date: 2022-10-12T21:27:24+08:00
+lastmod: 2022-10-12T21:27:24+08:00
+draft: false
+weight: 50
+images: ["review.jpg"]
+categories: ["review"]
+tags: []
+contributors: ["Xu Jun"]
+pinned: false
+homepage: false
+mermaid: true
+---
+```
+
+- `title`, `excerpt`, `date`, `images`, `categories` and `contributors` are used to display the cover of this blog
+- Note that `draft` must be false, otherwise it will not be added into the final page.
+
+  displayed 
+
 ## Decisions
 
 <div>

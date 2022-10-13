@@ -1,4 +1,4 @@
-baseurl = "http://localhost:1313/"
+baseurl = "http://localhost:1313/blog_review"
 canonifyURLs = false
 disableAliases = true
 disableHugoGeneratorInject = true
@@ -7,6 +7,7 @@ enableGitInfo = false
 enableRobotsTXT = true
 paginate = 7
 rssLimit = 10
+publishDir = "public/blog_review"
 
 # Multilingual
 defaultContentLanguage = "en"
