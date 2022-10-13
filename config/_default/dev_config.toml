@@ -1,4 +1,4 @@
-baseurl = "https://xujuntwt95329.github.io/blog_review/"
+baseurl = "http://localhost:1313/"
 canonifyURLs = false
 disableAliases = true
 disableHugoGeneratorInject = true

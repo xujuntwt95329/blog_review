@@ -17,6 +17,7 @@
     "init": "shx rm -rf .git && git init -b main",
     "prestart": "npm run clean",
     "start": "hugo server --bind=0.0.0.0 --disableFastRender",
+    "dev": "hugo server --bind=0.0.0.0 --disableFastRender --config config/_default/dev_config.toml",
     "prebuild": "npm run clean",
     "build": "hugo --gc --minify",
     "build:preview": "npm run build -D -F",

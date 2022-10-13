@@ -39,10 +39,10 @@ I investigated some modern blog tools and frameworks and made a comparison here:
 | description | static site generator(SSG) tool | react SSR & SSG framework | Content Management System | commercial content hosting service |
 | self host | √ | √ | √ | X |
 | tech stack | Go/JavaScript | JavaScript | JavaScript | - |
-| customizable | High | High | High | Low |
+| customizable | High | High | High | Low 😥 |
 | **need backend?** | No | Yes(No if pure SSG)  | Yes | - |
-| **deploy** | GitHub pages | server | server | provided service |
-| effort | theme + configure | JavaScript development | little | little |
+| **deploy** | GitHub pages | server | server 😥 | provided service |
+| effort | theme + configure | JavaScript development 😥 | little | little |
 
 - *Gitbook* is eliminate, since it's designed for documents and hard to do customization
 - *Nextjs* is eliminate, since it need some development effort
