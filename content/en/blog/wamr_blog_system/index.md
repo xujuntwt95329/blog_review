@@ -77,7 +77,7 @@ iframe {
 
 ## Folder structure
 
-``` bash
+``` bash {hl_lines=["4-9"],linenostart=0}
 .
 ├── archetypes                      # used by hugo, no need to care
 ├── assets                          # used by hugo, no need to care

@@ -1,4 +1,4 @@
-baseurl = "http://localhost:1313/blog_review"
+baseURL = "http://localhost:1313/blog_review"
 canonifyURLs = false
 disableAliases = true
 disableHugoGeneratorInject = true
@@ -64,6 +64,7 @@ rel  = "sitemap"
 
 [permalinks]
   blog = "/blog/:title/"
+  events = "/events/:title/"
 
 [minify.tdewolff.html]
   keepWhitespace = false

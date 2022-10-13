@@ -6,7 +6,27 @@
 <div class="sticky-top">
 {{ end -}}
 
-<div class="header-bar"></div>
+<style>
+.brand {
+    position: relative;
+    float: left;
+    left: 10px;
+    z-index: 1;
+    padding: 16px 0;
+    text-decoration: none;
+    color: #333333;
+}
+
+.brand:hover {
+  filter: brightness(60%);
+}
+</style>
+
+<div class="header-bar">
+  <a href="https://bytecodealliance.org/" class="brand">
+    <img src="{{ .Site.BaseURL }}/bytecode-alliance-logo.svg" alt="Bytecode Alliance logo" width="164">
+  </a>
+</div>
 
 <header class="navbar navbar-expand-lg navbar-light doks-navbar">
   <nav class="container-{{ if .Site.Params.options.fullWidth }}fluid{{ else }}xxl{{ end }} flex-wrap flex-lg-nowrap" aria-label="Main navigation">
