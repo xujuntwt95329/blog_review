@@ -12,6 +12,7 @@ tags: []
 contributors: ["Xu Jun"]
 pinned: false
 homepage: false
+mermaid: true
 ---
 
 # Motivation
@@ -38,15 +39,16 @@ I investigated some modern blog tools and frameworks and made a comparison here:
 | :---: | :---:  |  :----:  |  :----:   | :---: |
 | description | static site generator(SSG) tool | react SSR & SSG framework | Content Management System | commercial content hosting service |
 | self host | √ | √ | √ | X |
+| content management | file | file or db | db | file |
 | tech stack | Go/JavaScript | JavaScript | JavaScript | - |
 | customizable | High | High | High | Low 😥 |
 | **need backend?** | No | Yes(No if pure SSG)  | Yes | - |
 | **deploy** | GitHub pages | server | server 😥 | provided service |
 | effort | theme + configure | JavaScript development 😥 | little | little |
 
-- *Gitbook* is eliminate, since it's designed for documents and hard to do customization
-- *Nextjs* is eliminate, since it need some development effort
-- As for *hugo* and *ghostjs*, *hugo* wins 🎉 because it doesn't need a backend and can be hosted on GitHub pages, the github CI will deploy it automatically.
+- **Gitbook** is eliminate, since it's designed for documents and hard to do customization
+- **Nextjs** is eliminate, since it need some development effort
+- As for **hugo** and **ghostjs**, **hugo** wins 🎉 because it doesn't need a backend and can be hosted on GitHub pages, the github CI will deploy it automatically.
 
 ## Writing experience with Hugo
 
@@ -107,20 +109,64 @@ iframe {
 └── theme.toml                      # theme configuration, used by maintainer
 ```
 
-## Working flow
+## Deployment
 
 ![](workflow.excalidraw.png)
 
+## Workflow
+
+`With hugo`:
+``` mermaid
+graph LR;
+    A[git clone]-->B[hugo new blog]-->C[local preview]-->D[git push]-->E[pull request]-->F[blog updated];
+```
+
+`Without hugo`:
+
+If you just want to write some pure markdown articles and don't want to install hugo
+
+``` mermaid
+graph LR;
+    A[git clone]-->B[Add markdown file]-->C[git push]-->D[remote preview on Github]-->E[pull request]-->F[blog updated];
+```
+
 ## Command line
+
+`With hugo`:
 ``` bash
+# install hugo firstly ...
+# clone or pull repo
 git clone https://xujuntwt95329/wamr_blog.git
 cd wamr_blog
+# create new blog
 hugo new content/en/blog/<article_name>/index.md
 code content/en/blog/<article_name>/index.md
-# write the blog
+# write the blog ...
+# local preview
+npm install
+npm run dev
+# Open browser and navigate to preview url ...
+# submit
 git add content/en/blog/<article_name>
 git commit -m "add a blog post"
 gh pr create
+```
+
+`Without hugo`:
+``` bash
+# install hugo firstly ...
+# clone or pull repo
+git clone https://xujuntwt95329/wamr_blog.git
+cd wamr_blog
+# create new blog
+mkdir content/en/blog/<article_name>
+code content/en/blog/<article_name>/index.md
+# write the blog ...
+# push to fork repo
+git add content/en/blog/<article_name>
+git commit -m "add a blog post"
+git push <fork_repo> <branch>
+# preview markdown on Github
 ```
 
 ## Decisions
@@ -132,4 +178,8 @@ gh pr create
     <input type='checkbox'> We use an open-sourced theme called Doks with MIT license, is it OK?</input><br/>
     <input type='checkbox'> The `Docs` link will redirect to our gitbook once its finished.</input><br/>
     <input type='checkbox'> Do we want a comment channel?</input><br/>
+    <input type='checkbox'> Do we want an event page to publish some news?</input><br/>
+    <input type='checkbox'> Do we want a showcase page and invite other companies to submit?</input><br/>
+    <input type='checkbox'> Which features to show in the home page?</input><br/>
+    <input type='checkbox'> Do we need archive feature to automatically archive history articles?</input><br/>
 </div>
