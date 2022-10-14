@@ -152,3 +152,6 @@ hugo --minify
 
 This site is deployed by Github Pages, simply submit the commit and open a PR, the page will automatically updated once PR is merge.
 
+## Acknowledgement
+
+This site uses the hugo theme [doks](https://github.com/h-enk/doks).
