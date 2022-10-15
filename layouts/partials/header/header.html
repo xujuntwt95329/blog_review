@@ -23,12 +23,16 @@
 </style>
 
 <div class="header-bar">
-  <a href="https://bytecodealliance.org/" class="brand">
-    <img src="{{ .Site.BaseURL }}/bytecode-alliance-logo.svg" alt="Bytecode Alliance logo" width="164">
-  </a>
+
 </div>
 
 <header class="navbar navbar-expand-lg navbar-light doks-navbar">
+  <div>
+    <a href="https://bytecodealliance.org/" class="brand">
+      <img src="{{ .Site.BaseURL }}/bytecode-alliance-logo.svg" alt="Bytecode Alliance logo" width="164">
+    </a>
+  </div>
+
   <nav class="container-{{ if .Site.Params.options.fullWidth }}fluid{{ else }}xxl{{ end }} flex-wrap flex-lg-nowrap" aria-label="Main navigation">
 
     <a class="navbar-brand order-0" href="{{ "/blog_review" | relLangURL }}" aria-label="{{ .Site.Params.Title }}">
