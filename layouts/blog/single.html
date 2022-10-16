@@ -18,7 +18,7 @@
     {{ if .Params.tags -}}
     <div class="mt-4">
       {{ range $index, $tag := .Params.tags -}}
-        <a class="btn btn-light" href="{{ "/tags/" | absURL }}{{ . | urlize }}/" role="button">{{ . }}</a>
+        <a class="btn btn-light" href="{{ $.Site.BaseURL }}{{ "tags/" }}{{ . | urlize }}/" role="button">{{ . }}</a>
       {{ end -}}
     </div>
     {{ end -}}
